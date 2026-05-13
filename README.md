@@ -6,5 +6,7 @@ Yellow Team members:
 3. Angelo Pensalfine
 4. Wian Brits
 
-when downloaded run app.py to start game and open the link thats provided.
-Demo Story: D) We will play a round to showcase joystick-controls, demonstrate the game-over message via collision and present the scoreboard on a web page.
+When downloaded: run 'app.py' to start game and open the link that's provided.
+
+Demo Story: 
+We will play a round to showcase joystick-controls, demonstrate the game-over message via collision and present the scoreboard on a web page.
