@@ -13,4 +13,5 @@
 USER STORIES:
    1. ANGELO: As the person working on the breadboard and electical stuff I first made a small test code for the breadboard to ensure my wireing was correct.
       I want to ensure that the code for the breadboard and the breadboard itself worked with out issue.
-      So that when my code is combined with the main games code the LED's and buzzer work as intended. 
+      So that when my code is combined with the main games code the LED's and buzzer work as intended.
+   2. Bojerell: as the python coder and main coder of the game. I want to make a snake game where the user makes the snake move using the joystick on the sense HAT emulator.  The snake will grow by  1 led pixel for each fruit it eats. The game ends once the snake collides with the walls or if it coollides with itself
