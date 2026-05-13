@@ -9,3 +9,6 @@
       
 4. Demo Story:
    D) We will play a round to showcase joystick-controls, demonstrate the game-over message via collision and present the scoreboard on a web page.  
+
+USER STORIES:
+   1. 
