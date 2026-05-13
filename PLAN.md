@@ -11,4 +11,6 @@
    D) We will play a round to showcase joystick-controls, demonstrate the game-over message via collision and present the scoreboard on a web page.  
 
 USER STORIES:
-   1. 
+   1. As the person working on the breadboard and electical stuff I first made a small test code for the breadboard to ensure my wireing was correct.
+      I want to ensure that the code for the breadboard and the breadboard itself worked with out issue.
+      So that when my code is combined with the main games code the LED's and buzzer work as intended. 
