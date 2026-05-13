@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Score Board</title>
+</head>
+
+<body class="bg-gray-800 text-center text-white">
+
+    <h1 class="text-white underline font-bold text-4xl p-4">
+        Snake Score Board
+    </h1>
+
+    <!-- Latest Score -->
+    <div class="text-3xl font-bold mb-6">
+        Latest:
+        <span id="latest" class="text-green-400">0</span>
+    </div>
+
+    <!-- High Scores -->
+    <div class="max-w-md mx-auto bg-gray-900 p-4 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-3">Top 5</h2>
+
+        <ol id="scoreList" class="text-lg space-y-2"></ol>
+    </div>
+
+    <script>
+
+async function updateScore() {
+
+    try {
+        const response = await fetch("/api/scores");
+        const data = await response.json();
+
+        document.getElementById("latest").innerText =
+            data.latest_score ?? 0;
+
+        const scores = (data.score_list || [])
+            .map(s => Number(s))          // convert
+            .filter(s => !isNaN(s))       // REMOVE NaN values
+            .sort((a, b) => b - a)
+            .slice(0, 5);
+
+        const list = document.getElementById("scoreList");
+        list.innerHTML = "";
+
+        scores.forEach(score => {
+            const li = document.createElement("li");
+            li.className = "bg-gray-700 p-2 rounded text-xl font-semibold";
+            li.innerText = score;
+            list.appendChild(li);
+        });
+
+    } catch (error) {
+        console.log("Error fetching score:", error);
+    }
+}
+
+setInterval(updateScore, 5000);
+updateScore();
+
+</script>
+
+</body>
+</html>
